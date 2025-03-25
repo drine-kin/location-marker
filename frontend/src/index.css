@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url("/fonts/Inter.ttf") format("truetype");
+}
+
+@import "tailwindcss";
+
+@theme {
+    --font-inter: "Inter", "sans-serif";
+    --color-primary: #91bdd2;
+    --color-secondary: #1b1e33;
+    --color-accent: #6a4338;
+    --color-neutral: #9d6b58;
+}
+
+@layer utilities {
+    .container {
+        @apply w-full max-w-[1440px] mx-auto px-8 lg:px-16;
+    }
+}
+
+:root {
+    --font-inter: "Inter", "sans-serif";
+    --color-primary: #91bdd2;
+    --color-secondary: #1b1e33;
+    --color-accent: #6a4338;
+    --color-neutral: #9d6b58;
+}
+
+html {
+    font-family: var(--font-inter);
+}
+
+
+.leaflet-popup-content-wrapper {
+    @apply !rounded-sm;
+}
+
+.leaflet-popup-content {
+    @apply !m-2.5;
+}
